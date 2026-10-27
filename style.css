@@ -56,3 +56,43 @@
 #order-form .offer-main b{font-size:14px}
 }
 
+
+/* Policy-conscious UAE product information page */
+.intro{padding:86px 8%;display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:center;background:#fff}
+.intro h2,.use h2,.offers h2,.faq h2,.privacy h2{font-size:clamp(32px,4vw,50px);line-height:1.25;margin:0}
+.intro>p,.use p,.section-intro{color:var(--muted);margin:0}
+.details-grid{padding:0 8% 86px;background:#fff;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.details-grid article{border:1px solid var(--line);background:var(--paper);border-radius:14px;padding:28px}
+.details-grid article span{color:var(--gold);font:700 16px "Playfair Display",Georgia,serif}
+.details-grid h3{margin:15px 0 8px;font-size:19px}
+.details-grid p{color:var(--muted);font-size:14px;margin:0}
+.use{padding:86px 8%;display:grid;grid-template-columns:1.2fr 1fr;gap:55px;align-items:center;background:var(--cream)}
+.use>div>p:not(.eyebrow){color:var(--muted)}
+.use-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px}
+.use-card h3{margin-top:0}
+.use-card ul{padding-right:20px;margin-bottom:0;color:#615e55}
+.use-card li{padding:6px 0}
+.offers{padding:90px 8%;text-align:center;background:#171714;color:#fff}
+.offers .eyebrow{color:#c8a35f}
+.section-intro{max-width:700px;margin:16px auto 0;color:#c6c0b5}
+.package-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1000px;margin:38px auto 0;text-align:right}
+.package{border:1px solid #514e43;border-radius:14px;padding:28px;background:#201f1b}
+.package:nth-child(2){border-color:#c8a35f}
+.pack-label{font-size:11px;color:#c8a35f;font-weight:800}
+.package h3{margin:12px 0 0;font-size:23px}
+.package>p:not(.pack-label){color:#c6c0b5;font-size:13px}
+.price{font-size:34px;color:#fff;margin-top:22px}
+.price small{font-size:13px;color:#c6c0b5}
+.availability{max-width:800px;margin:28px auto 0;padding:14px 18px;border:1px solid #655b48;border-radius:8px;color:#e5d7bc;font-size:13px}
+.privacy{padding:45px 8%;background:#fff}
+.privacy h2{font-size:24px}
+.privacy p{color:var(--muted);max-width:900px}
+.note{font-size:11px!important;color:#8d8679!important;margin-top:14px}
+@media(max-width:850px){
+.intro,.use{grid-template-columns:1fr;gap:24px;padding:65px 6%}
+.details-grid{grid-template-columns:1fr;padding:0 6% 65px}
+.offers{padding:65px 6%}
+.package-grid{grid-template-columns:1fr}
+.package{padding:22px}
+.privacy{padding:38px 6%}
+}
