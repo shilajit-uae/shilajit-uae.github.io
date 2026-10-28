@@ -3,7 +3,7 @@ const CONFIG = {
   PRODUCT_NAME: "Googeer Himalayan Shilajit — GOOGEEER Page",
   SKU: "SHILAJIT",
   PRODUCT_WEIGHT: "",
-  COUNTRY: "SA",
+  COUNTRY: "AE",
   CURRENCY: "AED",
   OFFERS: {
     1: { label: "عبوة واحدة", price: 194 },
@@ -56,7 +56,7 @@ function updateSummary() {
   if (total) total.textContent = offer.price + " درهم";
 }
 
-function normalizeSaudiPhone(value) {
+function normalizeUAEPhone(value) {
   let phone = String(value || "").trim()
     .replace(/[٠-٩]/g, d => String("٠١٢٣٤٥٦٧٨٩".indexOf(d)))
     .replace(/[۰-۹]/g, d => String("۰۱۲۳۴۵۶۷۸۹".indexOf(d)))
@@ -115,7 +115,7 @@ form?.addEventListener("submit", async event => {
   if (phoneError) phoneError.textContent = "";
 
   const name = String(form.elements.name.value || "").trim();
-  const phone = normalizeSaudiPhone(form.elements.phone.value);
+  const phone = normalizeUAEPhone(form.elements.phone.value);
   const phoneField = form.elements.phone;
   if (name.length < 2) {
     status.textContent = "يرجى كتابة الاسم الكامل.";
@@ -124,7 +124,7 @@ form?.addEventListener("submit", async event => {
     return;
   }
   if (!phone) {
-    if (phoneError) phoneError.textContent = "أدخل رقم جوال سعودي صحيحًا من 10 أرقام، مثل 05xxxxxxxx.";
+    if (phoneError) phoneError.textContent = "أدخل رقم جوال إماراتي صحيحًا من 10 أرقام، مثل 05xxxxxxxx.";
     phoneField.setAttribute("aria-invalid", "true");
     phoneField.focus();
     return;
