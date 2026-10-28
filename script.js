@@ -61,9 +61,9 @@ function normalizeUAEPhone(value) {
     .replace(/[٠-٩]/g, d => String("٠١٢٣٤٥٦٧٨٩".indexOf(d)))
     .replace(/[۰-۹]/g, d => String("۰۱۲۳۴۵۶۷۸۹".indexOf(d)))
     .replace(/[\s()\-\u200e\u200f\u061c]/g, "");
-  if (phone.startsWith("+966")) phone = "0" + phone.slice(4);
-  else if (phone.startsWith("00966")) phone = "0" + phone.slice(5);
-  else if (phone.startsWith("966")) phone = "0" + phone.slice(3);
+  if (phone.startsWith("+971")) phone = "0" + phone.slice(4);
+  else if (phone.startsWith("00971")) phone = "0" + phone.slice(5);
+  else if (phone.startsWith("971")) phone = "0" + phone.slice(3);
   else if (/^5\d{8}$/.test(phone)) phone = "0" + phone;
   return /^05\d{8}$/.test(phone) ? phone : null;
 }
