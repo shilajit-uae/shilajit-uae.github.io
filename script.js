@@ -4,11 +4,11 @@ const CONFIG = {
   SKU: "SHILAJIT",
   PRODUCT_WEIGHT: "100 غرام",
   COUNTRY: "SA",
-  CURRENCY: "SAR",
+  CURRENCY: "AED",
   OFFERS: {
-    1: { label: "عبوة واحدة · 100 غرام", price: 198 },
-    2: { label: "عبوتان · 200 غرام", price: 288 },
-    3: { label: "3 عبوات · 300 غرام", price: 324 }
+    1: { label: "عبوة واحدة · 100 غرام", price: 194 },
+    2: { label: "عبوتان · 200 غرام", price: 249 },
+    3: { label: "3 عبوات · 300 غرام", price: 279 }
   },
   ORDER_ENDPOINT: "https://script.google.com/macros/s/AKfycbxxBGHE4mZ5iDdplvvaFxVhrHoOMETyRoafgk8iG-DGx9vhY27JgFhc3VHFBO22hu4x0w/exec",
   SNAP_PIXEL_ID: "233915bf-25f6-4119-9362-701fe3212185"
@@ -53,7 +53,7 @@ function currentOffer() {
 function updateSummary() {
   const offer = currentOffer();
   if (offerSummary) offerSummary.textContent = offer.code === 1 ? "عبوة واحدة · 100 غرام · تكفيك شهرين" : offer.label;
-  if (total) total.textContent = offer.price + " ريال";
+  if (total) total.textContent = offer.price + " درهم";
 }
 
 function normalizeSaudiPhone(value) {
